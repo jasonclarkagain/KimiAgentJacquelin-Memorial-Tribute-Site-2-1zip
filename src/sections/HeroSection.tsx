@@ -124,7 +124,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
           <span className="italic">Hellenberg</span>
         </h1>
         <p className="reveal text-lg text-[rgba(26,26,26,0.6)] font-light tracking-wide">
-          1987 — 2025
+          1965 — 2025
         </p>
         <p className="reveal body-text text-[rgba(26,26,26,0.5)] mt-8 max-w-md mx-auto">
           A life lived in color. Daughter, artist, friend.
