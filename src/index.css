@@ -115,6 +115,43 @@
     background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.3) 100%);
     pointer-events: none;
   }
+
+  /* Full-viewport pinned section */
+  .section-pinned {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Painted color-field block — Dan Rice inspired */
+  .painted-field {
+    position: absolute;
+    z-index: 1;
+    border-radius: 2px;
+  }
+
+  .painted-field-cream {
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFE87A 40%, #F9D94E 70%, #FFF3B0 100%);
+    opacity: 0.92;
+  }
+
+  .painted-field-slate {
+    background: linear-gradient(135deg, #C8EAF5 0%, #7EC8E3 40%, #A8D8EA 70%, #E0F4FC 100%);
+    opacity: 0.92;
+  }
+
+  .painted-field-ochre {
+    background: linear-gradient(135deg, #FFD5B0 0%, #FF9A5C 40%, #F7704A 70%, #FFB899 100%);
+    opacity: 0.88;
+  }
+
+  /* Portrait card — photo inset */
+  .portrait-card {
+    z-index: 2;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  }
   
   /* Grain texture - like canvas */
   .canvas-texture {

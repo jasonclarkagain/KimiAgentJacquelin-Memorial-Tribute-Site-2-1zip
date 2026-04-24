@@ -86,7 +86,7 @@ export default function RememberedSection({ className = '' }: RememberedSectionP
   return (
     <section
       ref={sectionRef}
-      className={`section-pinned bg-[#0B0B0D] ${className}`}
+      className={`section-pinned bg-white ${className}`}
     >
       {/* Slate Painted Field */}
       <div
@@ -130,13 +130,13 @@ export default function RememberedSection({ className = '' }: RememberedSectionP
           maxWidth: '36vw',
         }}
       >
-        <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#D4A03F] block mb-3">
+        <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C47A1E] block mb-3">
           Chapter Four
         </span>
-        <h2 className="text-[clamp(28px,3.2vw,50px)] font-serif text-[#F7F7F5] leading-[1.1] mb-4">
+        <h2 className="text-[clamp(28px,3.2vw,50px)] font-serif text-[#1A1A1A] leading-[1.1] mb-4">
           Remembered by many
         </h2>
-        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(247,247,245,0.72)] font-light leading-relaxed">
+        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.7)] font-light leading-relaxed">
           She was a friend who showed up—on porches, at openings, in the kitchen 
           with wine and good questions. Her circle was wide because her heart was wider.
         </p>

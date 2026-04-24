@@ -118,7 +118,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
     <section
       ref={sectionRef}
       id="memory"
-      className={`relative bg-[#1A1A1A] text-[#F8F7F4] py-32 lg:py-48 ${className}`}
+      className={`relative bg-[#F8F7F4] text-[#1A1A1A] py-32 lg:py-48 ${className}`}
     >
       {/* Subtle Artwork Background */}
       <div 
@@ -133,11 +133,11 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
       <div className="relative z-10 px-8 lg:px-16 max-w-5xl mx-auto">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-20">
-          <p className="reveal label-mono text-[rgba(248,247,244,0.5)] mb-4">Leave a Light</p>
-          <h2 className="reveal title-section text-[#F8F7F4] mb-6">
+          <p className="reveal label-mono text-[rgba(26,26,26,0.5)] mb-4">Leave a Light</p>
+          <h2 className="reveal title-section text-[#1A1A1A] mb-6">
             Share a Memory
           </h2>
-          <p className="reveal body-text text-[rgba(248,247,244,0.6)] max-w-xl mx-auto">
+          <p className="reveal body-text text-[rgba(26,26,26,0.6)] max-w-xl mx-auto">
             If you have a story, a thought, or a quiet moment you'd like to share, 
             please leave it here. Your words become part of her legacy.
           </p>
@@ -148,30 +148,30 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
           {/* Digital Candles */}
           <div className="animate-in">
             <div className="flex items-center justify-between mb-8">
-              <h3 className="font-serif text-xl text-[#F8F7F4] flex items-center gap-3">
-                <Flame className="w-5 h-5 text-[#D4AF37] candle-glow" />
+              <h3 className="font-serif text-xl text-[#1A1A1A] flex items-center gap-3">
+                <Flame className="w-5 h-5 text-[#C47A1E] candle-glow" />
                 Light a Candle
               </h3>
               <button
                 onClick={() => setShowCandleForm(!showCandleForm)}
-                className="label-mono text-[#D4AF37] hover:text-[#E8C76A] transition-colors"
+                className="label-mono text-[#C47A1E] hover:text-[#A86018] transition-colors"
               >
                 {showCandleForm ? 'Cancel' : 'Light One'}
               </button>
             </div>
 
             {showCandleForm && (
-              <form onSubmit={lightCandle} className="mb-8 p-6 bg-[rgba(248,247,244,0.05)] rounded-sm">
+              <form onSubmit={lightCandle} className="mb-8 p-6 bg-white rounded-sm border border-black/10">
                 <input
                   type="text"
                   value={newCandleName}
                   onChange={(e) => setNewCandleName(e.target.value)}
                   placeholder="Your name"
-                  className="w-full px-4 py-3 bg-transparent border border-[rgba(248,247,244,0.2)] text-[#F8F7F4] placeholder:text-[rgba(248,247,244,0.4)] focus:outline-none focus:border-[#D4AF37] transition-colors mb-4"
+                  className="w-full px-4 py-3 bg-transparent border border-black/20 text-[#1A1A1A] placeholder:text-black/40 focus:outline-none focus:border-[#C47A1E] transition-colors mb-4"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-[#D4AF37] hover:bg-[#C9A227] text-[#1A1A1A] label-mono transition-colors flex items-center gap-2"
+                  className="px-6 py-3 bg-[#C47A1E] hover:bg-[#A86018] text-white label-mono transition-colors flex items-center gap-2"
                 >
                   <Flame className="w-4 h-4" />
                   Light Candle
@@ -185,8 +185,8 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
                   key={candle.id}
                   className="flex flex-col items-center text-center p-3"
                 >
-                  <Flame className="w-6 h-6 text-[#D4AF37] candle-glow mb-2" />
-                  <span className="text-[10px] text-[rgba(248,247,244,0.6)]">{candle.name}</span>
+                  <Flame className="w-6 h-6 text-[#C47A1E] candle-glow mb-2" />
+                  <span className="text-[10px] text-[rgba(26,26,26,0.6)]">{candle.name}</span>
                 </div>
               ))}
             </div>
@@ -195,37 +195,37 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
           {/* Shared Memories */}
           <div className="animate-in">
             <div className="flex items-center justify-between mb-8">
-              <h3 className="font-serif text-xl text-[#F8F7F4] flex items-center gap-3">
-                <Heart className="w-5 h-5 text-[#D4AF37]" />
+              <h3 className="font-serif text-xl text-[#1A1A1A] flex items-center gap-3">
+                <Heart className="w-5 h-5 text-[#C47A1E]" />
                 Shared Memories
               </h3>
               <button
                 onClick={() => setShowMemoryForm(!showMemoryForm)}
-                className="label-mono text-[#D4AF37] hover:text-[#E8C76A] transition-colors"
+                className="label-mono text-[#C47A1E] hover:text-[#A86018] transition-colors"
               >
                 {showMemoryForm ? 'Cancel' : 'Share Yours'}
               </button>
             </div>
 
             {showMemoryForm && (
-              <form onSubmit={shareMemory} className="mb-8 p-6 bg-[rgba(248,247,244,0.05)] rounded-sm">
+              <form onSubmit={shareMemory} className="mb-8 p-6 bg-white rounded-sm border border-black/10">
                 <input
                   type="text"
                   value={newMemoryName}
                   onChange={(e) => setNewMemoryName(e.target.value)}
                   placeholder="Your name"
-                  className="w-full px-4 py-3 bg-transparent border border-[rgba(248,247,244,0.2)] text-[#F8F7F4] placeholder:text-[rgba(248,247,244,0.4)] focus:outline-none focus:border-[#D4AF37] transition-colors mb-4"
+                  className="w-full px-4 py-3 bg-transparent border border-black/20 text-[#1A1A1A] placeholder:text-black/40 focus:outline-none focus:border-[#C47A1E] transition-colors mb-4"
                 />
                 <textarea
                   value={newMemoryMessage}
                   onChange={(e) => setNewMemoryMessage(e.target.value)}
                   placeholder="Share a memory..."
                   rows={4}
-                  className="w-full px-4 py-3 bg-transparent border border-[rgba(248,247,244,0.2)] text-[#F8F7F4] placeholder:text-[rgba(248,247,244,0.4)] focus:outline-none focus:border-[#D4AF37] transition-colors mb-4 resize-none"
+                  className="w-full px-4 py-3 bg-transparent border border-black/20 text-[#1A1A1A] placeholder:text-black/40 focus:outline-none focus:border-[#C47A1E] transition-colors mb-4 resize-none"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-[#D4AF37] hover:bg-[#C9A227] text-[#1A1A1A] label-mono transition-colors flex items-center gap-2"
+                  className="px-6 py-3 bg-[#C47A1E] hover:bg-[#A86018] text-white label-mono transition-colors flex items-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   Share Memory
@@ -237,17 +237,17 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
               {memories.map((memory) => (
                 <div 
                   key={memory.id}
-                  className="p-6 bg-[rgba(248,247,244,0.05)] hover:bg-[rgba(248,247,244,0.08)] transition-colors"
+                  className="p-6 bg-white hover:bg-white/80 transition-colors border border-black/5"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-[#D4AF37]/20 flex items-center justify-center">
-                      <span className="text-xs text-[#D4AF37]">
+                    <div className="w-8 h-8 rounded-full bg-[#C47A1E]/20 flex items-center justify-center">
+                      <span className="text-xs text-[#C47A1E]">
                         {memory.name.charAt(0)}
                       </span>
                     </div>
-                    <span className="text-sm text-[#F8F7F4]">{memory.name}</span>
+                    <span className="text-sm text-[#1A1A1A]">{memory.name}</span>
                   </div>
-                  <p className="text-sm text-[rgba(248,247,244,0.7)] leading-relaxed pl-11">
+                  <p className="text-sm text-[rgba(26,26,26,0.7)] leading-relaxed pl-11">
                     {memory.message}
                   </p>
                 </div>
@@ -256,16 +256,16 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
           </div>
 
           {/* Footer */}
-          <footer className="animate-in pt-16 border-t border-[rgba(248,247,244,0.1)] text-center">
-            <p className="font-serif text-2xl text-[#F8F7F4] italic mb-4">
+          <footer className="animate-in pt-16 border-t border-black/10 text-center">
+            <p className="font-serif text-2xl text-[#1A1A1A] italic mb-4">
               "Color is the keyboard, the eyes are the harmonies, 
               <br className="hidden md:block" />
               the soul is the piano with many strings."
             </p>
-            <p className="label-mono text-[rgba(248,247,244,0.4)] mb-8">
+            <p className="label-mono text-[rgba(26,26,26,0.4)] mb-8">
               — Wassily Kandinsky
             </p>
-            <p className="text-[10px] text-[rgba(248,247,244,0.3)]">
+            <p className="text-[10px] text-[rgba(26,26,26,0.3)]">
               © 2026 Jacquelin Anne Hellenberg Memorial
             </p>
           </footer>

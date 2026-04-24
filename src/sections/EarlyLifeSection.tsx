@@ -95,7 +95,7 @@ export default function EarlyLifeSection({ className = '' }: EarlyLifeSectionPro
   return (
     <section
       ref={sectionRef}
-      className={`section-pinned bg-[#0B0B0D] ${className}`}
+      className={`section-pinned bg-white ${className}`}
     >
       {/* Slate Painted Field */}
       <div
@@ -138,7 +138,7 @@ export default function EarlyLifeSection({ className = '' }: EarlyLifeSectionPro
           top: '10vh',
         }}
       >
-        <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#D4A03F]">
+        <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C47A1E]">
           Chapter One
         </span>
       </div>
@@ -153,10 +153,10 @@ export default function EarlyLifeSection({ className = '' }: EarlyLifeSectionPro
           maxWidth: '34vw',
         }}
       >
-        <h2 className="text-[clamp(32px,3.6vw,54px)] font-serif text-[#F7F7F5] leading-[1.1] mb-4">
+        <h2 className="text-[clamp(32px,3.6vw,54px)] font-serif text-[#1A1A1A] leading-[1.1] mb-4">
           Early life
         </h2>
-        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(247,247,245,0.72)] font-light leading-relaxed">
+        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.7)] font-light leading-relaxed">
           Born in the quiet of winter, Jacquelin grew up curious—collecting shells, 
           sketching clouds, and filling the margins of every notebook with color.
         </p>

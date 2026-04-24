@@ -86,7 +86,7 @@ export default function ClosingSection({ className = '' }: ClosingSectionProps) 
   return (
     <section
       ref={sectionRef}
-      className={`section-pinned bg-[#0B0B0D] ${className}`}
+      className={`section-pinned bg-white ${className}`}
     >
       {/* Ochre Painted Field */}
       <div
@@ -130,17 +130,17 @@ export default function ClosingSection({ className = '' }: ClosingSectionProps) 
           maxWidth: '38vw',
         }}
       >
-        <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#D4A03F] block mb-3">
+        <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#C47A1E] block mb-3">
           Final Chapter
         </span>
-        <h2 className="text-[clamp(32px,3.6vw,54px)] font-serif text-[#F7F7F5] leading-[1.1] mb-4">
+        <h2 className="text-[clamp(32px,3.6vw,54px)] font-serif text-[#1A1A1A] leading-[1.1] mb-4">
           A life in color
         </h2>
-        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(247,247,245,0.72)] font-light leading-relaxed mb-4">
+        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.7)] font-light leading-relaxed mb-4">
           Jacquelin believed the world was worth beautifying. She did exactly that—
           one gesture, one canvas, one kindness at a time.
         </p>
-        <p className="text-[clamp(11px,0.9vw,13px)] text-[rgba(247,247,245,0.5)] font-light">
+        <p className="text-[clamp(11px,0.9vw,13px)] text-[rgba(26,26,26,0.5)] font-light">
           Thank you for remembering with us.
         </p>
       </div>

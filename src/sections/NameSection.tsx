@@ -86,7 +86,7 @@ export default function NameSection({ className = '' }: NameSectionProps) {
   return (
     <section
       ref={sectionRef}
-      className={`section-pinned bg-[#0B0B0D] ${className}`}
+      className={`section-pinned bg-white ${className}`}
     >
       {/* Cream Painted Field */}
       <div
@@ -130,15 +130,15 @@ export default function NameSection({ className = '' }: NameSectionProps) {
           maxWidth: '40vw',
         }}
       >
-        <h2 className="text-[clamp(28px,3.6vw,56px)] font-serif text-[#F7F7F5] leading-[1.1] mb-3">
+        <h2 className="text-[clamp(28px,3.6vw,56px)] font-serif text-[#1A1A1A] leading-[1.1] mb-3">
           Jacquelin Anne
           <br />
           Hellenberg
         </h2>
-        <p className="font-mono text-[clamp(14px,1.4vw,22px)] tracking-[0.1em] text-[#D4A03F] mb-4">
+        <p className="font-mono text-[clamp(14px,1.4vw,22px)] tracking-[0.1em] text-[#C47A1E] mb-4">
           1965 — 2025
         </p>
-        <p className="text-[clamp(12px,1vw,15px)] text-[rgba(247,247,245,0.72)] font-light tracking-wide">
+        <p className="text-[clamp(12px,1vw,15px)] text-[rgba(26,26,26,0.65)] font-light tracking-wide">
           Artist. Daughter. Friend.
         </p>
       </div>
