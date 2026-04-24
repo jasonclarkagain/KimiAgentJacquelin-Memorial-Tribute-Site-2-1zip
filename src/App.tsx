@@ -6,6 +6,7 @@ import ArtworkSection from './sections/ArtworkSection';
 import FamilySection from './sections/FamilySection';
 import GallerySection from './sections/GallerySection';
 import MemorySection from './sections/MemorySection';
+import UploadSection from './sections/UploadSection';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -73,6 +74,7 @@ function App() {
           <a href="#family">Family</a>
           <a href="#gallery">Gallery</a>
           <a href="#memory">Memory</a>
+          <a href="#share">Share</a>
         </div>
       </nav>
       
@@ -83,6 +85,7 @@ function App() {
         <FamilySection className="z-30" />
         <GallerySection className="z-40" />
         <MemorySection className="z-50" />
+        <UploadSection className="z-60" />
       </main>
     </div>
   );
