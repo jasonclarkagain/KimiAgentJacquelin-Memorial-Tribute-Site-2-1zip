@@ -6,6 +6,7 @@ import ArtworkSection from './sections/ArtworkSection';
 import FamilySection from './sections/FamilySection';
 import GallerySection from './sections/GallerySection';
 import MemorySection from './sections/MemorySection';
+import MousePaintEffect from './components/MousePaintEffect';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -62,6 +63,7 @@ function App() {
 
   return (
     <div ref={mainRef} className="relative bg-[#F8F7F4]">
+      <MousePaintEffect />
       {/* Canvas Texture Overlay */}
       <div className="canvas-texture" />
       
