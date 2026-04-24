@@ -87,25 +87,23 @@ export default function FamilySection({ className = '' }: FamilySectionProps) {
         ref={textRef}
         className="absolute left-8 lg:left-20 top-1/2 -translate-y-1/2 max-w-md z-10"
       >
-        <p className="reveal label-mono text-[#1A1A1A] mb-6">Family Ties</p>
+        <p className="reveal label-mono text-[#1A1A1A] mb-6">Family</p>
         <h2 className="reveal title-section text-[#1A1A1A] mb-8">
-          Two Families,<br />One Love
+          Her People,<br />Her Home
         </h2>
         <div className="reveal space-y-4 body-text text-[rgba(26,26,26,0.7)]">
           <p>
-            The Hellenbergs and the Rices were more than neighbors—they were 
-            family in every sense that mattered. Their homes shared walls, 
-            their children shared childhoods, and their dinner tables shared 
-            stories that stretched late into the night.
+            Jacquelin was the kind of person who made every room warmer just 
+            by being in it. To her family, she was the steady heart — present, 
+            generous, and full of life.
           </p>
           <p>
-            Dan's studio was Jacquelin's second home. She grew up surrounded 
-            by the smell of oil paint and turpentine, watching canvases transform 
-            from blank voids into worlds of color.
+            She loved deeply and without condition. Her home was always open, 
+            her table always set, and her laugh always the loudest in the room.
           </p>
           <p>
-            "She had an eye," Dan once said. "The kind that sees not just 
-            what is, but what could be."
+            Those lucky enough to know her carry something of her with them 
+            every single day.
           </p>
         </div>
       </div>

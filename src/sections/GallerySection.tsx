@@ -9,15 +9,12 @@ interface GallerySectionProps {
 }
 
 const galleryImages = [
-  { src: '/images/jackie_portrait1.jpg', alt: 'Jackie', span: 'col-span-1 row-span-2' },
-  { src: '/images/jackie_baby.jpg', alt: 'Early years', span: 'col-span-1' },
-  { src: '/images/jackie_kids_hammock.jpg', alt: 'Childhood joy', span: 'col-span-1' },
-  { src: '/images/jackie_sunset.jpg', alt: 'Golden hour', span: 'col-span-2' },
-  { src: '/images/jackie_with_elder.jpg', alt: 'With loved ones', span: 'col-span-1' },
-  { src: '/images/jackie_portrait2.jpg', alt: 'Her light', span: 'col-span-1 row-span-2' },
-  { src: '/images/gallery_01.jpg', alt: 'Reading', span: 'col-span-1' },
-  { src: '/images/gallery_04.jpg', alt: 'Laughter', span: 'col-span-1' },
-  { src: '/images/gallery_06.jpg', alt: 'In the garden', span: 'col-span-2' },
+  { src: '/images/jackie_portrait1.jpg', alt: 'Jackie' },
+  { src: '/images/jackie_sunset.jpg', alt: 'Golden hour' },
+  { src: '/images/jackie_with_elder.jpg', alt: 'With loved ones' },
+  { src: '/images/jackie_baby.jpg', alt: 'Early years' },
+  { src: '/images/jackie_kids_hammock.jpg', alt: 'Childhood joy' },
+  { src: '/images/jackie_portrait2.jpg', alt: 'Her light' },
 ];
 
 export default function GallerySection({ className = '' }: GallerySectionProps) {
@@ -91,24 +88,18 @@ export default function GallerySection({ className = '' }: GallerySectionProps) 
       {/* Gallery Grid */}
       <div 
         ref={gridRef}
-        className="px-8 lg:px-16 grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-3"
+        className="px-8 lg:px-16 grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4"
       >
         {galleryImages.map((image, index) => (
           <div 
             key={index}
-            className={`gallery-item ${image.span} group relative overflow-hidden`}
+            className="gallery-item group relative overflow-hidden aspect-[4/5]"
           >
-            <div className="artwork-frame w-full h-full">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                style={{ 
-                  minHeight: image.span.includes('row-span-2') ? '500px' : '240px',
-                  filter: 'grayscale(15%)'
-                }}
-              />
-            </div>
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+            />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
           </div>
         ))}

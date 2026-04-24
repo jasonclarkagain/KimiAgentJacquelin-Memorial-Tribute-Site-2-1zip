@@ -90,12 +90,12 @@ export default function ArtworkSection({ className = '' }: ArtworkSectionProps) 
       <div ref={titleRef} className="px-8 lg:px-16 mb-20">
         <p className="reveal label-mono text-[#1A1A1A] mb-4">The Art She Loved</p>
         <h2 className="reveal title-section text-[#1A1A1A] max-w-2xl">
-          Dan Rice and the New York School
+          A World of Color
         </h2>
         <p className="reveal body-text text-[rgba(26,26,26,0.6)] max-w-xl mt-6">
-          Jacquelin's family and Dan's were woven together by decades of friendship, 
-          shared meals, and a mutual love for the transformative power of abstract art. 
-          These paintings hung in her home, whispering their colors into her dreams.
+          Jacquelin had a deep and genuine love for abstract art. Color spoke to her 
+          in a language all its own — bold, honest, and alive. These paintings reflect 
+          the world she saw: rich with feeling, never ordinary.
         </p>
       </div>
 

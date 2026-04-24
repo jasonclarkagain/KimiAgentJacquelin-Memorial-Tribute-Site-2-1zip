@@ -96,7 +96,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
       id="hero"
       className={`gallery-section bg-[#F8F7F4] ${className}`}
     >
-      {/* Full-bleed Dan Rice Artwork */}
+      {/* Full-bleed Artwork Background */}
       <div
         ref={artworkRef}
         className="absolute inset-0"

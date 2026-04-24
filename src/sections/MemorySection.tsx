@@ -26,7 +26,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
   const contentRef = useRef<HTMLDivElement>(null);
   
   const [candles, setCandles] = useState<Candle[]>([
-    { id: 1, name: 'The Rice Family' },
+    { id: 1, name: 'The Hellenberg Family' },
     { id: 2, name: 'Sarah M.' },
     { id: 3, name: 'David H.' },
     { id: 4, name: 'Emma L.' },
@@ -34,13 +34,13 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
   const [memories, setMemories] = useState<Memory[]>([
     { 
       id: 1, 
-      name: 'Dan Rice', 
-      message: 'Jacquelin had the rare gift of seeing beauty in the ordinary. Her visits to my studio were always filled with thoughtful questions and genuine wonder. She will be deeply missed.' 
+      name: 'Margaret', 
+      message: 'Jackie had a way of making you feel like the most important person in the room. Her kindness was effortless and her smile was contagious. She will be deeply missed.' 
     },
     { 
       id: 2, 
-      name: 'Margaret', 
-      message: 'Thank you for teaching me to look at paintings differently—to see the emotion behind the brushstroke. Your light continues to shine.' 
+      name: 'Thomas', 
+      message: 'She loved fiercely and laughed freely. Every memory I have with Jackie is filled with warmth. Her light continues to shine in all of us.' 
     },
   ]);
   const [newCandleName, setNewCandleName] = useState('');
