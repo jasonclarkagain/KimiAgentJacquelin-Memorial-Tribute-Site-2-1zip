@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
-import { Upload, Download, Image, Video, FileText, X, ZipIcon } from 'lucide-react';
+import { Upload, Download, Image, Video, FileText, X, Archive } from 'lucide-react';
 import JSZip from 'jszip';
 
 interface MediaItem {
@@ -321,7 +321,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
                   disabled={zipping}
                   className="flex items-center gap-2 px-6 py-2.5 border border-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-white text-[#1A1A1A] label-mono transition-colors disabled:opacity-50"
                 >
-                  <ZipIcon className="w-4 h-4" />
+                  <Archive className="w-4 h-4" />
                   {zipping ? 'Preparing...' : 'Download All'}
                 </button>
               )}
