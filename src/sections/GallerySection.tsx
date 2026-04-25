@@ -77,6 +77,9 @@ export default function GallerySection({ className = '' }: GallerySectionProps) 
       id="gallery"
       className={`relative bg-[#F8F7F4] py-32 lg:py-48 ${className}`}
     >
+      {/* Gradient bridge from FamilySection */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#F0EDE6] to-transparent pointer-events-none z-0" />
+
       {/* Section Header */}
       <div ref={headerRef} className="px-8 lg:px-16 mb-16">
         <p className="reveal label-mono text-[#1A1A1A] mb-4">Moments in Time</p>

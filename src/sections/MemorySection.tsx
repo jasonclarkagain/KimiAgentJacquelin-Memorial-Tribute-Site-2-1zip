@@ -257,16 +257,17 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
 
           {/* Footer */}
           <footer className="animate-in pt-16 border-t border-black/10 text-center">
-            <p className="font-serif text-2xl text-[#1A1A1A] italic mb-4">
-              "Color is the keyboard, the eyes are the harmonies, 
-              <br className="hidden md:block" />
-              the soul is the piano with many strings."
+            <p className="label-mono text-[rgba(26,26,26,0.4)] mb-4 uppercase tracking-widest text-xs">
+              Her All-Time Favorite Book
             </p>
-            <p className="label-mono text-[rgba(26,26,26,0.4)] mb-8">
-              — Wassily Kandinsky
+            <p className="font-serif text-3xl lg:text-4xl text-[#1A1A1A] italic mb-3">
+              Love Medicine
+            </p>
+            <p className="label-mono text-[rgba(26,26,26,0.45)] mb-10">
+              — Louise Erdrich
             </p>
             <p className="text-[10px] text-[rgba(26,26,26,0.3)]">
-              © 2026 Jacquelin Anne Hellenberg Memorial
+              © 2025 Jacquelin Anne Hellenberg Memorial
             </p>
           </footer>
         </div>
