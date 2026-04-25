@@ -34,12 +34,12 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
   const [memories, setMemories] = useState<Memory[]>([
     { 
       id: 1, 
-      name: 'Margaret', 
+      name: 'Sheri', 
       message: 'Jackie had a way of making you feel like the most important person in the room. Her kindness was effortless and her smile was contagious. She will be deeply missed.' 
     },
     { 
       id: 2, 
-      name: 'Thomas', 
+      name: 'Curtis', 
       message: 'She loved fiercely and laughed freely. Every memory I have with Jackie is filled with warmth. Her light continues to shine in all of us.' 
     },
   ]);
@@ -69,7 +69,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
           scrollTrigger: {
             trigger: header,
             start: 'top 80%',
-            toggleActions: 'play none none reverse',
+            toggleActions: 'play none none none',
           },
         }
       );
@@ -86,7 +86,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
           scrollTrigger: {
             trigger: content,
             start: 'top 75%',
-            toggleActions: 'play none none reverse',
+            toggleActions: 'play none none none',
           },
         }
       );
