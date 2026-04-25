@@ -137,8 +137,8 @@ export default function RememberedSection({ className = '' }: RememberedSectionP
           Remembered by many
         </h2>
         <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.7)] font-light leading-relaxed">
-          She was a friend who showed up—on porches, at openings, in the kitchen 
-          with wine and good questions. Her circle was wide because her heart was wider.
+          She was a friend who showed up—on porches, around dinner tables, in the 
+          kitchen with wine and good questions. Her circle was wide because her heart was wider.
         </p>
       </div>
     </section>

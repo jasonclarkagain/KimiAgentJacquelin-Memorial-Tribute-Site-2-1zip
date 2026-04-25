@@ -115,7 +115,7 @@ export default function ClosingSection({ className = '' }: ClosingSectionProps) 
       >
         <img
           src="/images/closing_portrait.jpg"
-          alt="Jacquelin - A Life in Color"
+          alt="Jacquelin Anne Hellenberg"
           className="w-full h-full object-cover"
         />
       </div>
@@ -137,8 +137,8 @@ export default function ClosingSection({ className = '' }: ClosingSectionProps) 
           A life in color
         </h2>
         <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.7)] font-light leading-relaxed mb-4">
-          Jacquelin believed the world was worth beautifying. She did exactly that—
-          one gesture, one canvas, one kindness at a time.
+          Jacquelin believed the world was worth savoring. She did exactly that—
+          one meal, one memory, one kindness at a time.
         </p>
         <p className="text-[clamp(11px,0.9vw,13px)] text-[rgba(26,26,26,0.5)] font-light">
           Thank you for remembering with us.

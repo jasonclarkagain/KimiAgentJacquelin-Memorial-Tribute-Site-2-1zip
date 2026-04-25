@@ -139,7 +139,7 @@ export default function NameSection({ className = '' }: NameSectionProps) {
           1965 — 2025
         </p>
         <p className="text-[clamp(12px,1vw,15px)] text-[rgba(26,26,26,0.65)] font-light tracking-wide">
-          Artist. Daughter. Friend.
+          Mother. Sister. Friend.
         </p>
       </div>
     </section>

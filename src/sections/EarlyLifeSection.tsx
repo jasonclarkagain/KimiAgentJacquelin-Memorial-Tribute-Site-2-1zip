@@ -157,8 +157,10 @@ export default function EarlyLifeSection({ className = '' }: EarlyLifeSectionPro
           Early life
         </h2>
         <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.7)] font-light leading-relaxed">
-          Born in the quiet of winter, Jacquelin grew up curious—collecting shells, 
-          sketching clouds, and filling the margins of every notebook with color.
+          Born in the quiet of winter, Jacquelin grew up curious and full of warmth—
+          drawn to family tables, the smell of something good on the stove, and the 
+          stories tucked inside a well-loved book. Her all-time favorite was 
+          <em> Love Medicine</em> by Louise Erdrich.
         </p>
       </div>
     </section>

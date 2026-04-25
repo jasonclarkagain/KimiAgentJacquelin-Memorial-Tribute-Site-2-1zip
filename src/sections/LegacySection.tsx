@@ -115,7 +115,7 @@ export default function LegacySection({ className = '' }: LegacySectionProps) {
       >
         <img
           src="/images/artist_photo.jpg"
-          alt="Jacquelin's Artistic Legacy"
+          alt="Jacquelin Anne Hellenberg"
           className="w-full h-full object-cover"
         />
       </div>
@@ -134,11 +134,11 @@ export default function LegacySection({ className = '' }: LegacySectionProps) {
           Chapter Three
         </span>
         <h2 className="text-[clamp(32px,3.6vw,54px)] font-serif text-[#F7F7F5] leading-[1.1] mb-4">
-          Legacy of art
+          Her legacy
         </h2>
         <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(247,247,245,0.72)] font-light leading-relaxed">
-          Jacquelin made the world more beautiful—canvases, collages, and quiet 
-          moments arranged like still lifes. Her work lives on in every room she touched.
+          Jacquelin was a gifted cook who fed people body and soul. Her kitchen was 
+          a gathering place, and every meal she made was an act of love.
         </p>
       </div>
     </section>

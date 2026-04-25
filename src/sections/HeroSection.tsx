@@ -160,8 +160,8 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
           1965 — 2025
         </p>
         <p className="reveal body-text text-[rgba(26,26,26,0.5)] mt-8 max-w-md mx-auto">
-          A life lived in color. Daughter, artist, friend.
-          Her spirit lives on in the paintings she loved.
+          Mother, daughter, sister, friend.
+          Her warmth, her cooking, and her laughter live on in everyone she loved.
         </p>
       </div>
 
