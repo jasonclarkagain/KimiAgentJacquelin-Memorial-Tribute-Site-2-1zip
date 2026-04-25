@@ -13,6 +13,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
   const artworkRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const scrollCueRef = useRef<HTMLDivElement>(null);
+  const portraitRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -32,11 +33,20 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
       );
 
+      if (portraitRef.current) {
+        loadTl.fromTo(
+          portraitRef.current,
+          { opacity: 0, scale: 0.85 },
+          { opacity: 1, scale: 1, duration: 0.9, ease: 'back.out(1.4)' },
+          '-=0.9'
+        );
+      }
+
       loadTl.fromTo(
         text.querySelectorAll('.reveal'),
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: 'power2.out' },
-        '-=0.8'
+        '-=0.6'
       );
 
       if (scrollCue) {
@@ -77,6 +87,15 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         0.6
       );
 
+      if (portraitRef.current) {
+        scrollTl.fromTo(
+          portraitRef.current,
+          { opacity: 1, y: 0 },
+          { opacity: 0, y: -30, ease: 'power2.in' },
+          0.6
+        );
+      }
+
       if (scrollCue) {
         scrollTl.fromTo(
           scrollCue,
@@ -94,7 +113,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
     <section
       ref={sectionRef}
       id="hero"
-      className={`gallery-section bg-[#F8F7F4] ${className}`}
+      className={`gallery-section flex-col bg-[#F8F7F4] ${className}`}
     >
       {/* Full-bleed Artwork Background */}
       <div
@@ -109,6 +128,20 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
       
       {/* Subtle gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#F8F7F4]/80" />
+
+      {/* Portrait Circle */}
+      <div
+        ref={portraitRef}
+        className="relative z-10 mb-8"
+      >
+        <div className="w-36 h-36 rounded-full overflow-hidden ring-4 ring-white/70 shadow-2xl mx-auto">
+          <img
+            src="/images/jackie_portrait1.jpg"
+            alt="Jacquelin Anne Hellenberg"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+      </div>
 
       {/* Centered Text */}
       <div
