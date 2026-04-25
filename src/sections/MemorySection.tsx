@@ -336,7 +336,15 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
 
           {/* Footer */}
           <footer className="animate-in pt-16 border-t border-black/10 text-center">
-            <p className="label-mono text-[rgba(26,26,26,0.4)] mb-4 uppercase tracking-widest text-xs">
+            <div className="max-w-2xl mx-auto mb-14">
+              <p className="font-serif text-xl lg:text-2xl text-[#1A1A1A] italic leading-relaxed mb-6">
+                "Your life feels different on you, once you greet death and understand your heart's position. You wear your life like a garment from the mission bundle sale ever after – lightly because you realize you never paid nothing for it, cherishing because you know you won't ever come by such a bargain again."
+              </p>
+              <p className="label-mono text-[rgba(26,26,26,0.45)] text-xs tracking-widest">
+                — Louise Erdrich, <em className="not-italic font-medium">Love Medicine</em>
+              </p>
+            </div>
+            <p className="label-mono text-[rgba(26,26,26,0.4)] mb-3 uppercase tracking-widest text-xs">
               Her All-Time Favorite Book
             </p>
             <p className="font-serif text-3xl lg:text-4xl text-[#1A1A1A] italic mb-3">
