@@ -71,7 +71,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
           ease: 'power2.out',
           scrollTrigger: {
             trigger: header,
-            start: 'top 80%',
+            start: 'top 92%',
             toggleActions: 'play none none none',
           },
         }
@@ -88,7 +88,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
           ease: 'power2.out',
           scrollTrigger: {
             trigger: content,
-            start: 'top 75%',
+            start: 'top 88%',
             toggleActions: 'play none none none',
           },
         }
@@ -140,7 +140,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
     <section
       ref={sectionRef}
       id="memory"
-      className={`relative bg-[#F8F7F4] text-[#1A1A1A] py-32 lg:py-48 ${className}`}
+      className={`relative bg-[#F8F7F4] text-[#1A1A1A] pt-14 pb-20 lg:pt-16 lg:pb-28 ${className}`}
     >
       {/* Subtle Artwork Background */}
       <div 
@@ -154,7 +154,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
 
       <div className="relative z-10 px-8 lg:px-16 max-w-5xl mx-auto">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-20">
+        <div ref={headerRef} className="text-center mb-12">
           <p className="reveal label-mono text-[rgba(26,26,26,0.5)] mb-4">Leave a Light</p>
           <h2 className="reveal title-section text-[#1A1A1A] mb-6">
             Share a Memory

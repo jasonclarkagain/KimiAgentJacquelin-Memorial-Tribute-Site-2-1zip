@@ -25,7 +25,7 @@ export default function FamilySection({ className = '' }: FamilySectionProps) {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=130%',
+          end: '+=95%',
           pin: true,
           scrub: 0.5,
         },

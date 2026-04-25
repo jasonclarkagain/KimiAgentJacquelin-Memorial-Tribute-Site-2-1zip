@@ -63,7 +63,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=120%',
+          end: '+=90%',
           pin: true,
           scrub: 0.5,
           onLeaveBack: () => {

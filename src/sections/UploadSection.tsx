@@ -150,7 +150,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
   return (
     <section
       id="share"
-      className={`relative bg-white py-24 lg:py-40 ${className}`}
+      className={`relative bg-white pt-14 pb-20 lg:pt-16 lg:pb-28 ${className}`}
     >
       {/* Gradient bridge from MemorySection */}
       <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#F8F7F4] to-white pointer-events-none z-0" />

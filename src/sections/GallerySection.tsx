@@ -42,8 +42,8 @@ export default function GallerySection({ className = '' }: GallerySectionProps) 
           ease: 'power2.out',
           scrollTrigger: {
             trigger: header,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
+            start: 'top 92%',
+            toggleActions: 'play none none none',
           },
         }
       );
@@ -61,8 +61,8 @@ export default function GallerySection({ className = '' }: GallerySectionProps) 
           ease: 'power2.out',
           scrollTrigger: {
             trigger: grid,
-            start: 'top 75%',
-            toggleActions: 'play none none reverse',
+            start: 'top 88%',
+            toggleActions: 'play none none none',
           },
         }
       );
@@ -75,7 +75,7 @@ export default function GallerySection({ className = '' }: GallerySectionProps) 
     <section
       ref={sectionRef}
       id="gallery"
-      className={`relative bg-[#F8F7F4] py-32 lg:py-48 ${className}`}
+      className={`relative bg-[#F8F7F4] pt-14 pb-20 lg:pt-16 lg:pb-28 ${className}`}
     >
       {/* Gradient bridge from FamilySection */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#F0EDE6] to-transparent pointer-events-none z-0" />

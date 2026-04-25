@@ -51,8 +51,8 @@ export default function ArtworkSection({ className = '' }: ArtworkSectionProps) 
           ease: 'power2.out',
           scrollTrigger: {
             trigger: title,
-            start: 'top 80%',
-            toggleActions: 'play none none reverse',
+            start: 'top 92%',
+            toggleActions: 'play none none none',
           },
         }
       );
@@ -70,8 +70,8 @@ export default function ArtworkSection({ className = '' }: ArtworkSectionProps) 
           ease: 'power2.out',
           scrollTrigger: {
             trigger: artworksContainer,
-            start: 'top 75%',
-            toggleActions: 'play none none reverse',
+            start: 'top 88%',
+            toggleActions: 'play none none none',
           },
         }
       );
@@ -84,10 +84,10 @@ export default function ArtworkSection({ className = '' }: ArtworkSectionProps) 
     <section
       ref={sectionRef}
       id="artwork"
-      className={`relative bg-[#F8F7F4] py-32 lg:py-48 ${className}`}
+      className={`relative bg-[#F8F7F4] pt-14 pb-20 lg:pt-16 lg:pb-28 ${className}`}
     >
       {/* Section Header */}
-      <div ref={titleRef} className="px-8 lg:px-16 mb-20">
+      <div ref={titleRef} className="px-8 lg:px-16 mb-10">
         <p className="reveal label-mono text-[#1A1A1A] mb-4">The Art She Loved</p>
         <h2 className="reveal title-section text-[#1A1A1A] max-w-2xl">
           A World of Color
