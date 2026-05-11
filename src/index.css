@@ -178,16 +178,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    mix-blend-mode: difference;
+    background: rgba(248, 247, 244, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26, 26, 26, 0.06);
   }
   
   .nav-minimal a {
-    color: var(--rice-white);
+    color: #1A1A1A;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.7;
+    opacity: 0.6;
     transition: opacity 0.3s ease;
   }
   
