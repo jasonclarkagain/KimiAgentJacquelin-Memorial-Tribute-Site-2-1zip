@@ -266,8 +266,11 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
             <p className="label-mono text-[rgba(26,26,26,0.7)] mb-10">
               — Louise Erdrich
             </p>
-            <p className="text-[10px] text-[rgba(26,26,26,0.3)]">
+            <p className="text-[11px] text-[rgba(26,26,26,0.5)] mb-1">
               © 2025 Jacquelin Anne Hellenberg Memorial
+            </p>
+            <p className="text-[11px] text-[rgba(26,26,26,0.45)]">
+              Made with ♥ by Jason Clark
             </p>
           </footer>
         </div>

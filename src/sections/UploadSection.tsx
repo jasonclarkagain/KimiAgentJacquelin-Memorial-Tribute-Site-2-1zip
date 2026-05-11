@@ -439,12 +439,6 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
           </div>
         )}
 
-        {media.length === 0 && (
-          <div className="text-center py-20 border border-dashed border-black/10">
-            <Image className="w-10 h-10 text-[rgba(26,26,26,0.45)] mx-auto mb-4" />
-            <p className="body-text text-[rgba(26,26,26,0.65)]">No shared memories yet — be the first.</p>
-          </div>
-        )}
 
         {/* Stay Updated */}
         <div className="mt-20 p-8 bg-[#F8F7F4] border border-black/8">
