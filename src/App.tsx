@@ -7,6 +7,7 @@ import FamilySection from './sections/FamilySection';
 import GallerySection from './sections/GallerySection';
 import MemorySection from './sections/MemorySection';
 import UploadSection from './sections/UploadSection';
+import SeasonalParticles from './components/SeasonalParticles';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -63,6 +64,9 @@ function App() {
 
   return (
     <div ref={mainRef} className="relative bg-[#F8F7F4]">
+      {/* Seasonal Particles */}
+      <SeasonalParticles />
+
       {/* Canvas Texture Overlay */}
       <div className="canvas-texture" />
       
