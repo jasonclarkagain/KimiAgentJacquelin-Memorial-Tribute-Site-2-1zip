@@ -229,7 +229,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
               {memories.map((memory) => (
                 <div 
                   key={memory.id}
-                  className="p-6 bg-white hover:bg-white/80 transition-colors border border-black/5"
+                  className="p-6 bg-white hover:bg-white/80 transition-colors border border-black/5 border-l-2 border-l-[#C47A1E]"
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 rounded-full bg-[#C47A1E]/20 flex items-center justify-center">
