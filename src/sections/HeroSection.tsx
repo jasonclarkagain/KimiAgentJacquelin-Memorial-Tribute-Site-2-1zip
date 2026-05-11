@@ -134,7 +134,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         ref={portraitRef}
         className="relative z-10 mb-8"
       >
-        <div className="w-52 h-52 rounded-full overflow-hidden ring-4 ring-white/70 shadow-2xl mx-auto">
+        <div className="w-72 h-72 rounded-full overflow-hidden ring-4 ring-white/70 shadow-2xl mx-auto">
           <img
             src="/images/jackie_portrait1.jpg"
             alt="Jacquelin Anne Hellenberg"
