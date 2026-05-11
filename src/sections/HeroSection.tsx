@@ -137,8 +137,9 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         <div
           className="mx-auto"
           style={{
-            width: '380px',
-            height: '380px',
+            width: '760px',
+            height: '760px',
+            marginTop: '40px',
             maskImage: 'radial-gradient(ellipse 55% 53% at 50% 42%, black 48%, transparent 78%)',
             WebkitMaskImage: 'radial-gradient(ellipse 55% 53% at 50% 42%, black 48%, transparent 78%)',
           }}
