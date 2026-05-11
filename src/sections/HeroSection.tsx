@@ -170,7 +170,6 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         ref={scrollCueRef}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
       >
-        <span className="label-mono text-[#1A1A1A]">Scroll</span>
         <div className="scroll-line text-[#1A1A1A]" />
       </div>
     </section>
