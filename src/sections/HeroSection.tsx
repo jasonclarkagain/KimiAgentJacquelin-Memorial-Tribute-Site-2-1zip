@@ -135,19 +135,18 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         className="relative z-10 mb-8"
       >
         <div
-          className="mx-auto w-72 h-72 rounded-full p-[3px] shadow-2xl"
+          className="mx-auto w-72 h-72 rounded-full overflow-hidden"
           style={{
-            background: 'linear-gradient(135deg, #C47A1E 0%, #E8B84B 50%, #C47A1E 100%)',
-            boxShadow: '0 8px 48px rgba(0,0,0,0.28), 0 0 0 1px rgba(196,122,30,0.2)',
+            boxShadow:
+              '0 0 0 1px rgba(196,122,30,0.08), 0 12px 60px rgba(0,0,0,0.32), 0 0 80px rgba(196,122,30,0.18)',
+            filter: 'drop-shadow(0 0 24px rgba(196,122,30,0.22))',
           }}
         >
-          <div className="w-full h-full rounded-full overflow-hidden">
-            <img
-              src="/images/jackie_portrait1.jpg"
-              alt="Jacquelin Anne Hellenberg"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
+          <img
+            src="/images/jackie_portrait1.jpg"
+            alt="Jacquelin Anne Hellenberg"
+            className="w-full h-full object-cover object-top"
+          />
         </div>
       </div>
 
