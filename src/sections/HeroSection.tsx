@@ -135,11 +135,12 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
         className="relative z-10 mb-8"
       >
         <div
-          className="mx-auto w-72 h-72 rounded-full overflow-hidden"
+          className="mx-auto"
           style={{
-            boxShadow:
-              '0 0 0 1px rgba(196,122,30,0.08), 0 12px 60px rgba(0,0,0,0.32), 0 0 80px rgba(196,122,30,0.18)',
-            filter: 'drop-shadow(0 0 24px rgba(196,122,30,0.22))',
+            width: '380px',
+            height: '380px',
+            maskImage: 'radial-gradient(ellipse 55% 53% at 50% 42%, black 48%, transparent 78%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 55% 53% at 50% 42%, black 48%, transparent 78%)',
           }}
         >
           <img
