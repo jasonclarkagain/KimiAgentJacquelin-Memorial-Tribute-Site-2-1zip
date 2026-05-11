@@ -125,11 +125,11 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
       <div className="relative z-10 px-8 lg:px-16 max-w-5xl mx-auto">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-12">
-          <p className="reveal label-mono text-[rgba(26,26,26,0.5)] mb-4">Leave a Light</p>
+          <p className="reveal label-mono text-[rgba(26,26,26,0.72)] mb-4">Leave a Light</p>
           <h2 className="reveal title-section text-[#1A1A1A] mb-6">
             Share a Memory
           </h2>
-          <p className="reveal body-text text-[rgba(26,26,26,0.6)] max-w-xl mx-auto">
+          <p className="reveal body-text text-[rgba(26,26,26,0.8)] max-w-xl mx-auto">
             If you have a story, a thought, or a quiet moment you'd like to share, 
             please leave it here. Your words become part of her legacy.
           </p>
@@ -178,7 +178,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
                   className="flex flex-col items-center text-center p-3"
                 >
                   <Flame className="w-6 h-6 text-[#C47A1E] candle-glow mb-2" />
-                  <span className="text-[10px] text-[rgba(26,26,26,0.6)]">{candle.name}</span>
+                  <span className="text-[10px] text-[rgba(26,26,26,0.8)]">{candle.name}</span>
                 </div>
               ))}
             </div>
@@ -239,7 +239,7 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
                     </div>
                     <span className="text-sm text-[#1A1A1A]">{memory.name}</span>
                   </div>
-                  <p className="text-sm text-[rgba(26,26,26,0.7)] leading-relaxed pl-11">
+                  <p className="text-sm text-[rgba(26,26,26,0.85)] leading-relaxed pl-11">
                     {memory.message}
                   </p>
                 </div>
@@ -253,17 +253,17 @@ export default function MemorySection({ className = '' }: MemorySectionProps) {
               <p className="font-serif text-xl lg:text-2xl text-[#1A1A1A] italic leading-relaxed mb-6">
                 "Your life feels different on you, once you greet death and understand your heart's position. You wear your life like a garment from the mission bundle sale ever after – lightly because you realize you never paid nothing for it, cherishing because you know you won't ever come by such a bargain again."
               </p>
-              <p className="label-mono text-[rgba(26,26,26,0.45)] text-xs tracking-widest">
+              <p className="label-mono text-[rgba(26,26,26,0.68)] text-xs tracking-widest">
                 — Louise Erdrich, <em className="not-italic font-medium">Love Medicine</em>
               </p>
             </div>
-            <p className="label-mono text-[rgba(26,26,26,0.4)] mb-3 uppercase tracking-widest text-xs">
+            <p className="label-mono text-[rgba(26,26,26,0.65)] mb-3 uppercase tracking-widest text-xs">
               Her All-Time Favorite Book
             </p>
             <p className="font-serif text-3xl lg:text-4xl text-[#1A1A1A] italic mb-3">
               Love Medicine
             </p>
-            <p className="label-mono text-[rgba(26,26,26,0.45)] mb-10">
+            <p className="label-mono text-[rgba(26,26,26,0.7)] mb-10">
               — Louise Erdrich
             </p>
             <p className="text-[10px] text-[rgba(26,26,26,0.3)]">

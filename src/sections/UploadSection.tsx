@@ -181,9 +181,9 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
 
         {/* Header */}
         <div className="mb-16">
-          <p className="label-mono text-[rgba(26,26,26,0.5)] mb-4">Share With Everyone</p>
+          <p className="label-mono text-[rgba(26,26,26,0.72)] mb-4">Share With Everyone</p>
           <h2 className="title-section text-[#1A1A1A] mb-4">Add Your Memories</h2>
-          <p className="body-text text-[rgba(26,26,26,0.6)] max-w-xl">
+          <p className="body-text text-[rgba(26,26,26,0.8)] max-w-xl">
             Upload photos, videos, or write a memory. Everything shared here 
             becomes part of Jackie's story — and can always be downloaded by anyone who visits.
           </p>
@@ -194,7 +194,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
 
           {/* Name field */}
           <div className="mb-6">
-            <label className="label-mono text-[rgba(26,26,26,0.6)] block mb-2">Your Name</label>
+            <label className="label-mono text-[rgba(26,26,26,0.8)] block mb-2">Your Name</label>
             <input
               type="text"
               value={uploaderName}
@@ -211,7 +211,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
               className={`flex items-center gap-2 px-5 py-3 label-mono transition-colors ${
                 activeTab === 'photo-video'
                   ? 'text-[#C47A1E] border-b-2 border-[#C47A1E] -mb-px'
-                  : 'text-[rgba(26,26,26,0.5)] hover:text-[#1A1A1A]'
+                  : 'text-[rgba(26,26,26,0.72)] hover:text-[#1A1A1A]'
               }`}
             >
               <Image className="w-4 h-4" /> Photos & Videos
@@ -221,7 +221,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
               className={`flex items-center gap-2 px-5 py-3 label-mono transition-colors ${
                 activeTab === 'text'
                   ? 'text-[#C47A1E] border-b-2 border-[#C47A1E] -mb-px'
-                  : 'text-[rgba(26,26,26,0.5)] hover:text-[#1A1A1A]'
+                  : 'text-[rgba(26,26,26,0.72)] hover:text-[#1A1A1A]'
               }`}
             >
               <FileText className="w-4 h-4" /> Write a Memory
@@ -242,11 +242,11 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
                     : 'border-black/20 hover:border-[#C47A1E]/60 hover:bg-[#C47A1E]/3'
                 }`}
               >
-                <Upload className="w-8 h-8 text-[rgba(26,26,26,0.3)] mx-auto mb-3" />
+                <Upload className="w-8 h-8 text-[rgba(26,26,26,0.55)] mx-auto mb-3" />
                 <p className="body-text text-[#1A1A1A] mb-1">
                   Drop photos or videos here, or <span className="text-[#C47A1E] underline">browse</span>
                 </p>
-                <p className="label-mono text-[rgba(26,26,26,0.4)]">JPG, PNG, GIF, MP4, MOV — up to 500MB each</p>
+                <p className="label-mono text-[rgba(26,26,26,0.65)]">JPG, PNG, GIF, MP4, MOV — up to 500MB each</p>
               </div>
               <input
                 ref={fileInputRef}
@@ -260,7 +260,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
               {/* Selected files preview */}
               {selectedFiles.length > 0 && (
                 <div className="space-y-3">
-                  <p className="label-mono text-[rgba(26,26,26,0.5)]">{selectedFiles.length} file(s) ready</p>
+                  <p className="label-mono text-[rgba(26,26,26,0.72)]">{selectedFiles.length} file(s) ready</p>
                   <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
                     {selectedFiles.map((f, i) => (
                       <div key={i} className="relative group aspect-square bg-white border border-black/10 overflow-hidden">
@@ -272,8 +272,8 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
                           />
                         ) : (
                           <div className="w-full h-full flex flex-col items-center justify-center gap-1">
-                            <Video className="w-6 h-6 text-[rgba(26,26,26,0.4)]" />
-                            <span className="text-[10px] text-[rgba(26,26,26,0.5)] px-2 text-center truncate w-full">{f.name}</span>
+                            <Video className="w-6 h-6 text-[rgba(26,26,26,0.65)]" />
+                            <span className="text-[10px] text-[rgba(26,26,26,0.72)] px-2 text-center truncate w-full">{f.name}</span>
                           </div>
                         )}
                         <button
@@ -307,7 +307,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
                   {uploading ? 'Uploading...' : 'Upload'}
                 </button>
                 {uploadProgress && (
-                  <span className="label-mono text-[rgba(26,26,26,0.6)]">{uploadProgress}</span>
+                  <span className="label-mono text-[rgba(26,26,26,0.8)]">{uploadProgress}</span>
                 )}
               </div>
             </div>
@@ -355,7 +355,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
             {/* Images */}
             {imageMedia.length > 0 && (
               <div className="mb-16">
-                <p className="label-mono text-[rgba(26,26,26,0.5)] mb-6">Photos ({imageMedia.length})</p>
+                <p className="label-mono text-[rgba(26,26,26,0.72)] mb-6">Photos ({imageMedia.length})</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                   {imageMedia.map(item => (
                     <div key={item.id} className="group relative aspect-square overflow-hidden bg-[#F8F7F4]">
@@ -390,7 +390,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
             {/* Videos */}
             {videoMedia.length > 0 && (
               <div className="mb-16">
-                <p className="label-mono text-[rgba(26,26,26,0.5)] mb-6">Videos ({videoMedia.length})</p>
+                <p className="label-mono text-[rgba(26,26,26,0.72)] mb-6">Videos ({videoMedia.length})</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {videoMedia.map(item => (
                     <div key={item.id} className="group relative bg-black rounded-sm overflow-hidden">
@@ -403,7 +403,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
                       <div className="p-4 bg-[#F8F7F4] flex items-center justify-between">
                         <div>
                           {item.caption && <p className="text-sm text-[#1A1A1A] mb-0.5">{item.caption}</p>}
-                          <span className="label-mono text-[rgba(26,26,26,0.5)] text-[10px]">
+                          <span className="label-mono text-[rgba(26,26,26,0.72)] text-[10px]">
                             {item.uploader} · {formatDate(item.uploadedAt)} · {formatSize(item.size)}
                           </span>
                         </div>
@@ -423,12 +423,12 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
             {/* Text memories */}
             {textMedia.length > 0 && (
               <div>
-                <p className="label-mono text-[rgba(26,26,26,0.5)] mb-6">Written Memories ({textMedia.length})</p>
+                <p className="label-mono text-[rgba(26,26,26,0.72)] mb-6">Written Memories ({textMedia.length})</p>
                 <div className="space-y-4">
                   {textMedia.map(item => (
                     <div key={item.id} className="p-6 bg-[#F8F7F4] border-l-4 border-[#C47A1E]/40">
                       <p className="body-text text-[#1A1A1A] leading-relaxed mb-4">"{item.content}"</p>
-                      <p className="label-mono text-[rgba(26,26,26,0.4)]">
+                      <p className="label-mono text-[rgba(26,26,26,0.65)]">
                         — {item.uploader} · {formatDate(item.uploadedAt)}
                       </p>
                     </div>
@@ -441,8 +441,8 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
 
         {media.length === 0 && (
           <div className="text-center py-20 border border-dashed border-black/10">
-            <Image className="w-10 h-10 text-[rgba(26,26,26,0.2)] mx-auto mb-4" />
-            <p className="body-text text-[rgba(26,26,26,0.4)]">No shared memories yet — be the first.</p>
+            <Image className="w-10 h-10 text-[rgba(26,26,26,0.45)] mx-auto mb-4" />
+            <p className="body-text text-[rgba(26,26,26,0.65)]">No shared memories yet — be the first.</p>
           </div>
         )}
 
@@ -452,7 +452,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
             <Bell className="w-5 h-5 text-[#C47A1E] mt-1 flex-shrink-0" />
             <div className="flex-1">
               <h3 className="font-serif text-lg text-[#1A1A1A] mb-1">Stay updated</h3>
-              <p className="text-sm text-[rgba(26,26,26,0.6)] mb-5">
+              <p className="text-sm text-[rgba(26,26,26,0.8)] mb-5">
                 Get an email whenever a new photo, video, or memory is added to this page.
               </p>
 
@@ -463,7 +463,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
                 </div>
               )}
               {subStatus === 'already' && (
-                <div className="flex items-center gap-2 text-sm text-[rgba(26,26,26,0.5)]">
+                <div className="flex items-center gap-2 text-sm text-[rgba(26,26,26,0.75)]">
                   <BellOff className="w-4 h-4" />
                   You're already subscribed.
                 </div>

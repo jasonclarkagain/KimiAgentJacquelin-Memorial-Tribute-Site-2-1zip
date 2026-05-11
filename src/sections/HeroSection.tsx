@@ -166,10 +166,10 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
           <br />
           <span className="italic">Hellenberg</span>
         </h1>
-        <p className="reveal text-lg text-[rgba(26,26,26,0.6)] font-light tracking-wide">
+        <p className="reveal text-lg text-[rgba(26,26,26,0.8)] font-light tracking-wide">
           1965 — 2025
         </p>
-        <p className="reveal body-text text-[rgba(26,26,26,0.5)] mt-8 max-w-md mx-auto">
+        <p className="reveal body-text text-[rgba(26,26,26,0.75)] mt-8 max-w-md mx-auto">
           Mother, daughter, sister, friend.
           Her warmth, her cooking, and her laughter live on in everyone she loved.
         </p>

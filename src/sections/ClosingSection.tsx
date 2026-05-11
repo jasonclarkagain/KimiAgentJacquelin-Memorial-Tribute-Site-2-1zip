@@ -136,11 +136,11 @@ export default function ClosingSection({ className = '' }: ClosingSectionProps) 
         <h2 className="text-[clamp(32px,3.6vw,54px)] font-serif text-[#1A1A1A] leading-[1.1] mb-4">
           A life in color
         </h2>
-        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.7)] font-light leading-relaxed mb-4">
+        <p className="text-[clamp(13px,1.1vw,16px)] text-[rgba(26,26,26,0.85)] font-light leading-relaxed mb-4">
           Jacquelin believed the world was worth savoring. She did exactly that—
           one meal, one memory, one kindness at a time.
         </p>
-        <p className="text-[clamp(11px,0.9vw,13px)] text-[rgba(26,26,26,0.5)] font-light">
+        <p className="text-[clamp(11px,0.9vw,13px)] text-[rgba(26,26,26,0.75)] font-light">
           Thank you for remembering with us.
         </p>
       </div>
