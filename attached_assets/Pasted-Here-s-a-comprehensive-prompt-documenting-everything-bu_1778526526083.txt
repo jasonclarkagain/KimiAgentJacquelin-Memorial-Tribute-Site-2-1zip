@@ -1,0 +1,147 @@
+Here's a comprehensive prompt documenting everything built so far for the **Jacquelin Anne Hellenberg Memorial Website**:
+
+---
+
+## Project: Living Memorial for Jacquelin Anne Hellenberg (Jackie)
+
+### What Was Built
+
+A production-grade React + Vite + Tailwind CSS memorial website that evolves into a **living canvas** where visitors can share memories, photos, videos, and messages. The site features automatic seasonal theming that changes visual effects throughout the year.
+
+---
+
+### Tech Stack
+- **Node.js 20**, **Vite v7.2.4**, **Tailwind CSS v3.4.19**
+- **GSAP + ScrollTrigger** for pinned scroll sections and animations
+- **shadcn/ui** component library (40+ components available)
+- **LocalStorage** for client-side memory persistence
+- **HTML5 Canvas API** for seasonal particle effects
+
+---
+
+### Real Photos Integrated (8 images)
+All uploaded family photographs are stored in `public/images/`:
+
+| File | Description | Used In |
+|---|---|---|
+| `jackie-smile.jpg` | Jackie's smiling portrait | Hero section (circular), Gallery |
+| `jackie-portrait.jpg` | Formal portrait | Artwork section (framed), Gallery |
+| `jackie-blue.jpg` | Jackie in blue top | Gallery |
+| `jackie-mother.jpg` | Jackie with her mother | Family card, Gallery |
+| `jackie-young.jpg` | Young Jackie with camera | Gallery |
+| `jackie-child.jpg` | Jackie as a child | Family card, Gallery |
+| `loren.jpg` | Loren (older sister, passed) | Family card (grayscale + "In Memory" badge), Gallery |
+| `sisters-hammock.jpg` | Jackie, Loren & Hillary Rice in hammock | Family card, Gallery |
+
+---
+
+### Section Architecture (6 sections)
+
+1. **HeroSection** — Full-viewport pinned. Circular portrait of Jackie, name, dates (1952–2024), tagline, scroll indicator. Color field backgrounds. GSAP entrance timeline + fade-out on scroll.
+
+2. **ArtworkSection** ("Her Spirit") — Full-viewport pinned. Large framed portrait with authentic story about Jackie's life, her sister Loren, her mother, and best friend Hillary Rice. Stats: 72 Years, ∞ Hearts Touched, 1 Unforgettable Smile.
+
+3. **FamilySection** ("Her People") — Full-viewport pinned. 4 portrait cards: Her Mother, Loren (with grayscale + "In Memory" badge), Hillary Rice (Best Friend), Young Jackie. Real photos with hover color overlays.
+
+4. **GallerySection** — Full-viewport pinned, dark void background. Masonry grid of all 8 photos. Hover labels. **Click-to-expand lightbox** for full-size viewing. Grayscale-to-color hover transition.
+
+5. **LivingCanvasSection** — **NOT pinned** (scrollable for form interaction). The community space. Seasonal background tint. Contains the MemoryFeed component.
+
+6. **UploadSection** — Full-viewport pinned. Legacy memory submission form with name, email, text, photo upload, confirmation state.
+
+---
+
+### Living Canvas Features (Community)
+
+| Feature | Details |
+|---|---|
+| **Memory Feed** | Scrollable list of shared memories with author avatars, timestamps |
+| **Text Posts** | Name, email, story text — all required fields |
+| **Photo Upload** | JPG, PNG, GIF, WEBP supported |
+| **Video Upload** | MP4, WEBM, MOV supported — up to 50MB per file |
+| **Multi-file Upload** | Multiple photos/videos per memory post |
+| **Drag & Drop** | Full drag-and-drop zone with visual feedback |
+| **Preview Grid** | Thumbnails before submitting, with remove (X) buttons |
+| **Likes/Hearts** | One per session, animated heart icon, live count |
+| **Comments/Replies** | Threaded chat under each memory — name + text required |
+| **Delete/Moderate** | Hover-reveal trash icon for family oversight |
+| **Demo Data** | 3 pre-loaded memories (Sarah Mitchell, Margaret Chen, James Hellenberg) |
+| **Persistence** | All data saves to `localStorage` — survives page refresh |
+| **Relative Timestamps** | "Just now", "5m ago", "2h ago", "3d ago" formatting |
+
+---
+
+### Seasonal Engine
+
+**Auto-detects current season** based on month and applies subtle theme shifts:
+
+| Season | Months | Primary Color | Particle Effect |
+|---|---|---|---|
+| Spring | Mar–May | Aqua `#7EC8C8` | Floating pink petals |
+| Summer | Jun–Aug | Teal `#5BA8A8` | Golden sun sparkles |
+| Autumn | Sep–Nov | Rust `#C96A50` | Falling amber leaves |
+| Winter | Dec–Feb | Ice `#A8D8EA` | White snowflakes |
+
+- **CSS custom properties** injected at `:root` — all components react to `var(--season-primary)`, `var(--season-secondary)`, etc.
+- **HTML5 Canvas particle system** — 30 particles (15 on mobile), floating with sine-wave sway, rotation, opacity variation. `mix-blend-mode: screen` for ethereal effect.
+- **Season badge** — Subtle "Spring"/"Summer"/"Autumn"/"Winter" label in bottom-right corner.
+- **Reduced motion support** — Particles disabled when `prefers-reduced-motion: reduce` is active.
+
+---
+
+### Design System (Dan Rice / Yves Klein Aesthetic)
+
+- **Typography**: Playfair Display (headings), Inter (body), IBM Plex Mono (labels)
+- **Palette**: Cream `#F8F7F4`, Charcoal `#2A2A2A`, Gold `#D4AF37`, Klein Blue `#002FA7`
+- **Texture**: SVG noise grain overlay at 3% opacity, `mix-blend-mode: multiply`
+- **Navigation**: Fixed top nav with `mix-blend-mode: difference` — works on light and dark sections
+- **Scroll Behavior**: GSAP ScrollTrigger global snap — smooth section landing
+- **Accessibility**: `prefers-reduced-motion` media query, focus-visible outlines, semantic HTML
+
+---
+
+### File Structure
+
+```
+/mnt/agents/output/app/
+├── public/
+│   └── images/              ← 8 real family photographs
+├── src/
+│   ├── App.tsx              ← Root: particles, nav, sections, seasonal hook
+│   ├── main.tsx             ← Entry point (StrictMode, no router)
+│   ├── App.css              ← Scrollbar, selection, reduced motion
+│   ├── index.css            ← Tailwind + seasonal vars + animations
+│   ├── hooks/
+│   │   ├── useSeasonal.ts   ← Season detection + CSS variable injection
+│   │   └── useMemoryStore.ts ← LocalStorage CRUD + demo data + formatting
+│   ├── types/
+│   │   └── memory.ts        ← Memory, Comment, MediaFile interfaces
+│   ├── components/
+│   │   ├── SeasonalParticles.tsx ← Canvas floating particle system
+│   │   ├── MemoryCard.tsx   ← Individual memory (likes, comments, delete)
+│   │   └── MemoryFeed.tsx   ← Upload form + feed container + drag-drop
+│   └── sections/
+│       ├── HeroSection.tsx
+│       ├── ArtworkSection.tsx
+│       ├── FamilySection.tsx
+│       ├── GallerySection.tsx
+│       ├── LivingCanvasSection.tsx
+│       └── UploadSection.tsx
+├── index.html
+├── tailwind.config.js
+├── vite.config.ts
+└── postcss.config.js
+```
+
+---
+
+### What This Prompt Should Produce
+
+If given to an AI or developer, this prompt should result in:
+1. A fully functional memorial website with all 6 scroll sections
+2. Real family photos integrated into Hero, Family, Gallery, and Artwork sections
+3. A working community memory feed with photo/video upload, likes, and threaded comments
+4. Automatic seasonal theming with canvas particle effects
+5. GSAP pinned scroll animations with global snap behavior
+6. LocalStorage persistence for all user-generated content
+7. Responsive design with mobile adjustments and reduced motion support
