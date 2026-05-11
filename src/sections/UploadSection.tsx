@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
-import { Upload, Download, Image, Video, FileText, X, Archive } from 'lucide-react';
+import { Upload, Download, Image, Video, FileText, X, Archive, Bell, BellOff } from 'lucide-react';
 import JSZip from 'jszip';
 
 interface MediaItem {
@@ -30,6 +30,9 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
   const [uploadProgress, setUploadProgress] = useState('');
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [zipping, setZipping] = useState(false);
+  const [subEmail, setSubEmail] = useState('');
+  const [subName, setSubName] = useState('');
+  const [subStatus, setSubStatus] = useState<'idle' | 'loading' | 'done' | 'already' | 'error'>('idle');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const fetchMedia = useCallback(async () => {
@@ -131,6 +134,25 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
     a.click();
     URL.revokeObjectURL(a.href);
     setZipping(false);
+  };
+
+  const subscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!subEmail.trim()) return;
+    setSubStatus('loading');
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: subEmail.trim(), name: subName.trim() }),
+      });
+      const data = await res.json();
+      if (data.already) setSubStatus('already');
+      else if (data.success) setSubStatus('done');
+      else setSubStatus('error');
+    } catch {
+      setSubStatus('error');
+    }
   };
 
   const formatDate = (iso: string) => {
@@ -423,6 +445,63 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
             <p className="body-text text-[rgba(26,26,26,0.4)]">No shared memories yet — be the first.</p>
           </div>
         )}
+
+        {/* Stay Updated */}
+        <div className="mt-20 p-8 bg-[#F8F7F4] border border-black/8">
+          <div className="flex items-start gap-4">
+            <Bell className="w-5 h-5 text-[#C47A1E] mt-1 flex-shrink-0" />
+            <div className="flex-1">
+              <h3 className="font-serif text-lg text-[#1A1A1A] mb-1">Stay updated</h3>
+              <p className="text-sm text-[rgba(26,26,26,0.6)] mb-5">
+                Get an email whenever a new photo, video, or memory is added to this page.
+              </p>
+
+              {subStatus === 'done' && (
+                <div className="flex items-center gap-2 text-sm text-[#C47A1E]">
+                  <Bell className="w-4 h-4" />
+                  You're subscribed. We'll let you know when something new is shared.
+                </div>
+              )}
+              {subStatus === 'already' && (
+                <div className="flex items-center gap-2 text-sm text-[rgba(26,26,26,0.5)]">
+                  <BellOff className="w-4 h-4" />
+                  You're already subscribed.
+                </div>
+              )}
+              {subStatus === 'error' && (
+                <p className="text-sm text-red-500">Something went wrong. Please try again.</p>
+              )}
+
+              {(subStatus === 'idle' || subStatus === 'loading') && (
+                <form onSubmit={subscribe} className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="text"
+                    value={subName}
+                    onChange={e => setSubName(e.target.value)}
+                    placeholder="Your name (optional)"
+                    className="px-4 py-2.5 border border-black/15 text-sm text-[#1A1A1A] placeholder:text-black/30 focus:outline-none focus:border-[#C47A1E] transition-colors w-full sm:w-48"
+                  />
+                  <input
+                    type="email"
+                    value={subEmail}
+                    onChange={e => setSubEmail(e.target.value)}
+                    placeholder="Your email address"
+                    required
+                    className="px-4 py-2.5 border border-black/15 text-sm text-[#1A1A1A] placeholder:text-black/30 focus:outline-none focus:border-[#C47A1E] transition-colors flex-1"
+                  />
+                  <button
+                    type="submit"
+                    disabled={subStatus === 'loading'}
+                    className="px-6 py-2.5 bg-[#C47A1E] hover:bg-[#A86018] text-white label-mono text-xs transition-colors disabled:opacity-50 whitespace-nowrap flex items-center gap-2"
+                  >
+                    <Bell className="w-3.5 h-3.5" />
+                    {subStatus === 'loading' ? 'Subscribing…' : 'Notify Me'}
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
