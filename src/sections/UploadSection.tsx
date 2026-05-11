@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { Upload, Download, Image, Video, FileText, X, Archive, Bell, BellOff } from 'lucide-react';
 import JSZip from 'jszip';
 
@@ -154,6 +154,51 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
       setSubStatus('error');
     }
   };
+
+  const erdrichQuotes = useMemo(() => [
+    {
+      text: "Your life feels different on you, once you greet death and understand your heart's position. You wear your life like a garment from the mission bundle sale ever after – lightly because you realize you never paid nothing for it, cherishing because you know you won't ever come by such a bargain again.",
+      source: "Love Medicine"
+    },
+    {
+      text: "There are times in life when a person has to rush off in pursuit of hopefulness.",
+      source: "The Bingo Palace"
+    },
+    {
+      text: "We are what we grieve. The world is what we lose.",
+      source: "The Painted Drum"
+    },
+    {
+      text: "Life will break you. Nobody can protect you from that, and living alone won't either, for solitude will also break you with its yearning. You have to love. You have to feel. It is the reason you are here on earth.",
+      source: "The Painted Drum"
+    },
+    {
+      text: "Love is the only thing that never diminishes.",
+      source: "The Night Watchman"
+    },
+    {
+      text: "There is always a sacred mystery to what a person is made of that no other can know.",
+      source: "Four Souls"
+    },
+    {
+      text: "Sometimes the greatest act of love is continuing to live.",
+      source: "The Plague of Doves"
+    },
+  ], []);
+
+  const [quoteIndex, setQuoteIndex] = useState(0);
+  const [quoteVisible, setQuoteVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setQuoteVisible(false);
+      setTimeout(() => {
+        setQuoteIndex(i => (i + 1) % erdrichQuotes.length);
+        setQuoteVisible(true);
+      }, 600);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [erdrichQuotes.length]);
 
   const formatDate = (iso: string) => {
     return new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
@@ -499,14 +544,34 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
 
         {/* Footer */}
         <footer className="mt-20 pt-12 border-t border-black/10 text-center">
-          <div className="max-w-2xl mx-auto mb-14">
-            <p className="font-serif text-xl lg:text-2xl text-[#1A1A1A] italic leading-relaxed mb-6">
-              "Your life feels different on you, once you greet death and understand your heart's position. You wear your life like a garment from the mission bundle sale ever after – lightly because you realize you never paid nothing for it, cherishing because you know you won't ever come by such a bargain again."
-            </p>
-            <p className="label-mono text-[rgba(26,26,26,0.68)] text-xs tracking-widest">
-              — Louise Erdrich, <em className="not-italic font-medium">Love Medicine</em>
-            </p>
+          <div className="max-w-2xl mx-auto mb-14 min-h-[12rem] flex flex-col items-center justify-center">
+            <div
+              style={{
+                transition: 'opacity 0.6s ease',
+                opacity: quoteVisible ? 1 : 0,
+              }}
+            >
+              <p className="font-serif text-xl lg:text-2xl text-[#1A1A1A] italic leading-relaxed mb-6">
+                "{erdrichQuotes[quoteIndex].text}"
+              </p>
+              <p className="label-mono text-[rgba(26,26,26,0.68)] text-xs tracking-widest">
+                — Louise Erdrich, <em className="not-italic font-medium">{erdrichQuotes[quoteIndex].source}</em>
+              </p>
+            </div>
           </div>
+
+          <div className="flex justify-center gap-2 mb-10">
+            {erdrichQuotes.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => { setQuoteVisible(false); setTimeout(() => { setQuoteIndex(i); setQuoteVisible(true); }, 300); }}
+                className="w-1.5 h-1.5 rounded-full transition-colors"
+                style={{ background: i === quoteIndex ? '#C47A1E' : 'rgba(26,26,26,0.2)' }}
+                aria-label={`Quote ${i + 1}`}
+              />
+            ))}
+          </div>
+
           <p className="label-mono text-[rgba(26,26,26,0.65)] mb-3 uppercase tracking-widest text-xs">
             Her All-Time Favorite Book
           </p>
