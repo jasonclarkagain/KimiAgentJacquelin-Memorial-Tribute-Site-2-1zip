@@ -1,0 +1,33 @@
+System Architecture & Implementation Request
+
+Objective: Refactor my existing memorial site into a 2026-standard "Living Canvas." This must be a top-tier, high-concurrency, and ultra-resilient platform that feels cinematic and interactive.
+
+1. The Technical Stack Requirements:
+
+    Frontend: Refactor to Astro 5.0+ using React Three Fiber for the 3D canvas elements. Use GSAP for physics-based animations.
+
+    Backend Engine: Move the core logic to Rust (using Axum). It must handle high-concurrency memory safety for real-time memory sharing.
+
+    Real-time Layer: Implement NATS or ultra-low latency WebSockets for "Live Presence" (whenever someone lights a candle, it must reflect globally in <100ms).
+
+    Database: Use a SurrealDB schema to handle the graph relationships between "Friends," "Memories," and "Media Tags."
+
+    Runtime: The entire build pipeline must be optimized for Bun.
+
+2. Core Features to Architect:
+
+    The Spatial Canvas: A 3D-accelerated field where users can navigate. Memories (photos/videos/audio) should be rendered as "light nodes" in this space.
+
+    Media Resilience: Implement an upload pipeline for Cloudflare R2 with automatic transcoding for audio and video memories to ensure they play instantly on any device.
+
+    Microservice Configuration: For all generated services (Docker or local configs), always set the bind ports to 0 to allow the system to dynamically assign available ports and prevent local development conflicts.
+
+3. Specific Code Tasks:
+
+    Provide a robust Rust Axum handler for the "Memory Submission" endpoint.
+
+    Generate a Three.js/React Three Fiber component for a "Dynamic Candle Flame" that reacts to user proximity.
+
+    Provide a docker-compose.yml using the cat << 'EOF' > syntax that sets up the Rust engine and SurrealDB with dynamic port mapping.
+
+Tone: I am looking for high-level, production-ready systems architecture. No "Safe Boot" suggestions or basic HTML/CSS templates. Focus on performance, memory safety, and cinematic UX.
