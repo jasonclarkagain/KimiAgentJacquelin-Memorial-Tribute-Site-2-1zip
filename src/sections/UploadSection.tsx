@@ -520,7 +520,7 @@ export default function UploadSection({ className = '' }: UploadSectionProps) {
             © 2025 Jacquelin Anne Hellenberg Memorial
           </p>
           <p className="text-[11px] text-[rgba(26,26,26,0.45)] mb-8">
-            Made with ♥ by <a href="https://jason-clark.org" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[rgba(26,26,26,0.7)] transition-colors">Jason Clark</a>
+            Made with <span className="text-red-500">♥</span> by <a href="https://jason-clark.org" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[rgba(26,26,26,0.7)] transition-colors">Jason Clark</a>
           </p>
         </footer>
       </div>
