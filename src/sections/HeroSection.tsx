@@ -156,6 +156,7 @@ export default function HeroSection({ className = '' }: HeroSectionProps) {
       <div
         ref={textRef}
         className="relative z-10 text-center px-6 max-w-3xl"
+        style={{ marginTop: '-230px' }}
       >
         <p className="reveal label-mono text-[#1A1A1A] mb-6">
           In Memory Of
