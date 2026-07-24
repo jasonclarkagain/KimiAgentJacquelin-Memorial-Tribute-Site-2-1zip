@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "TO3D2KdUNEfbTX7cmGMgf"
+uri = "file://jacquelin-memorial.zip"
+type = "unspecified"
+title = "Jacquelin Memorial — Source Code (7.8 MB)"
